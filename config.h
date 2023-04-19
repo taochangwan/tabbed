@@ -23,6 +23,9 @@ static       Bool urgentswitch  = False;
 static int  newposition   = 0;
 static Bool npisrelative  = False;
 
+// bar height
+static const int barHeight	= 24;
+
 #define SETPROP(p) { \
         .v = (char *[]){ "/bin/sh", "-c", \
                 "prop=\"`xwininfo -children -id $1 | grep '^     0x' |" \
