@@ -10,7 +10,7 @@ DOCPREFIX = /usr/share/doc/${NAME}
 
 # use system flags.
 TABBED_CFLAGS = -I/usr/X11R6/include -I/usr/include/freetype2 ${CFLAGS}
-TABBED_LDFLAGS = -L/usr/X11R6/lib -lX11 -lfontconfig -lXft ${LDFLAGS}
+TABBED_LDFLAGS = -L/usr/X11R6/lib -lX11 -lfontconfig -lXft -lXrender ${LDFLAGS}
 TABBED_CPPFLAGS = -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700L
 
 # OpenBSD (uncomment)
@@ -37,7 +37,7 @@ config.h:
 	${CC} -o $@ $< ${TABBED_LDFLAGS}
 
 clean:
-	rm -f ${BIN} ${OBJ} "${NAME}-${VERSION}.tar.gz"
+	rm -f ${BIN} ${OBJ} "${NAME}-${VERSION}.tar.gz" *.orig *.diff *.rej
 
 dist: clean
 	mkdir -p "${NAME}-${VERSION}"
