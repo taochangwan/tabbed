@@ -5,8 +5,8 @@ VERSION = 0.7
 
 # paths
 PREFIX = /usr/local
-MANPREFIX = ${PREFIX}/share/man
-DOCPREFIX = ${PREFIX}/share/doc/${NAME}
+MANPREFIX = /usr/share/man
+DOCPREFIX = /usr/share/doc/${NAME}
 
 # use system flags.
 TABBED_CFLAGS = -I/usr/X11R6/include -I/usr/include/freetype2 ${CFLAGS}
