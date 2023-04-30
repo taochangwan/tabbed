@@ -4,7 +4,7 @@ NAME = tabbed
 VERSION = 0.7
 
 # paths
-PREFIX = /usr/local
+PREFIX = /usr
 MANPREFIX = /usr/share/man
 DOCPREFIX = /usr/share/doc/${NAME}
 
